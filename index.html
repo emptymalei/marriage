@@ -1,0 +1,507 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>纽约时报十五问</title>
+	<meta name="title" content="关于结婚的几个问题" />
+	<meta name="description" content="关于结婚，几个问题" />
+	<link rel="image_src" href="/images/tip_cards_image.png" />
+
+	<meta content="http://www.thepetedesign.com/demos/tip_cards_demo.html" property="og:url" />
+	<meta content="http://www.thepetedesign.com/images/tip_cards_image.png" property="og:image" />
+	<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+	<meta name="author" content="Pete R.">
+	<link rel="canonical" href="http://www.thepetedesign.com/demos/tip_cards_demo.html" />
+	<link href='http://fonts.googleapis.com/css?family=OpenSans:100,300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='tip_cards.css' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.tip_cards.js"></script>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: #E5E8ED;
+      padding: 0;
+      text-align: center;
+      font-family: 'Open Sans';
+      position: relative;
+      margin: 0;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizelegibility;
+    }
+    
+    a {
+      color: black;
+    }
+    
+    .header {
+      padding: 30px 0 0;
+      float: left;
+      width: 100%;
+      background: white;
+    }
+    
+    .wrapper {
+    	height: auto !important;
+    	height: 100%;
+    	margin: 0 auto; 
+    	overflow: hidden;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    
+    h1, h2 {
+      width: 100%;
+      float: left;
+    }
+    h1 {
+      margin-top: 100px;
+      color: #999;
+      margin-bottom: 5px;
+      /*font-size: 70px;*/
+      font-weight: 100;
+    }
+    h2 {
+      padding: 00px 20px 30px 20px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      letter-spacing: 0px;
+      color: #888;
+      font-size: 20px;
+      line-height: 160%;
+      font-weight: 100;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    
+    
+    .pointer {
+      color: #00B0FF;
+      font-family: 'Pacifico';
+      font-size: 24px;
+      margin-top: 15px;
+      position: absolute;
+      top: 130px;
+      right: -40px;
+    }
+    .pointer2 {
+      color: #00B0FF;
+      font-family: 'Pacifico';
+      font-size: 24px;
+      margin-top: 15px;
+      position: absolute;
+      top: 130px;
+      left: -40px;
+    }
+    pre {
+      margin: 80px auto;
+    }
+    pre code {
+      padding: 35px;
+      border-radius: 5px;
+      font-size: 15px;
+      background: rgba(0,0,0,0.1);
+      border: rgba(0,0,0,0.05) 5px solid;
+      max-width: 500px;
+    }
+
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    
+    .main h1 {
+      padding:20px 50px 10px;
+      float: left;
+      width: 100%;
+      font-size: 60px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 100;
+      margin: 0;
+      padding-top: 25px;
+      font-family: 'Open Sans';
+      letter-spacing: -1px;
+      text-transform: capitalize;
+    }
+   
+    .main h1.demo1 {
+      background: #1ABC9C;
+    }
+    
+    .reload.bell {
+      font-size: 12px;
+      padding: 20px;
+      width: 45px;
+      text-align: center;
+      height: 47px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+    }
+    
+    .reload.bell #notification {
+      font-size: 25px;
+      line-height: 140%;
+    }
+    
+    .reload, .btn{
+      display: inline-block;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      display: inline-block;
+      line-height: 100%;
+      padding: 0.7em;
+      text-decoration: none;
+      width: 100px;
+      line-height: 140%;
+      font-size: 17px;
+      font-family: Open Sans;
+      font-weight: bold;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: #4D90FE;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: linear-gradient(top,#4d90fe,#4787ed);
+      border: 1px solid #3079ED;
+      color: #FFF;
+    }
+    .reload:hover{
+      background: #317af2;
+    }
+    .btn {
+      width: 200px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background-color: #4D90FE;
+      background-image: -webkit-linear-gradient(top,#4D90FE,#4787ED);
+      background-image: linear-gradient(top,#4d90fe,#4787ed);
+      border: 1px solid #3079ED;
+      color: #FFF;
+    }
+    .clear {
+      width: auto;
+    }
+    .btn:hover, .btn:hover {
+      background: #317af2;
+    }
+    .btns {
+      width: 410px;
+      margin: 50px auto;
+    }
+    .credit {
+      text-align: center;
+      color: #888;
+      padding: 10px 10px;
+      margin: 0 0 0 0;
+      background: #f5f5f5;
+      float: left;
+      width: 100%;
+    }
+    .credit a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+    
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      display: block;
+      padding: 7px;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background:#f5f5f5;
+      font-weight: bold;
+      font-size: 13px;
+      color: #888;
+      -webkit-transition: all 200ms ease-out;
+      -moz-transition: all 200ms ease-out;
+      -o-transition: all 200ms ease-out;
+      transition: all 200ms ease-out;
+    }
+    .back:hover {
+      background: #eee;
+    }
+  
+    
+    .page-container {
+      max-width: 1010px;
+      margin: auto;
+      position: relative;
+    }
+    
+    .page-container p{
+      font-size: 21px;
+      font-weight: 100;
+      line-height: 180%;
+    }
+    
+    .page-container h3 {
+      font-family: "noto serif";
+      font-size: 23px;
+    }
+
+    .tip {
+      display: none;
+    }
+
+    .tc_modal {
+      width: 890px;
+    }
+    
+    .tc_body .tc_card .tc_inner_card .tc_click_target {
+      font-size: 1.25em;
+      color: #888;
+      line-height: 25px;
+      font-weight: 300;
+      text-align: left;
+      padding: 30px 30px 30px 30px;
+    }
+    
+    .tc_card:nth-child(1n+1) .tc_inner_card  {
+      border-bottom: 3px solid #1345ED;
+    }
+    
+    .tc_card:nth-child(2n+2) .tc_inner_card  {
+      border-bottom: 3px solid #03A010;
+    }
+    
+    .tc_card:nth-child(3n+3) .tc_inner_card  {
+      border-bottom: 3px solid #F8B00F;
+    }
+    
+    .tc_card:nth-child(4n+4) .tc_inner_card {
+      border-bottom: 3px solid #DD4330;
+    }
+    
+    
+    .tc_back p {
+      font-family: Open Sans, sans-serif;
+      font-weight: 300;
+      padding: 50px 20px 20px;
+      margin: 0 0 10px 0;
+      color: #8A8C93;
+      color: #777;
+      letter-spacing: -1.2px;
+      font-size: 3.5625em;
+      line-height: 72px;
+      text-align: left;
+    }
+    .tc_inner_modal .tc_front {
+      min-height: 300px;
+    }
+    
+    .tc_inner_modal .tc_front h1 {
+      margin-top: 20px;
+      font-size: 32px;
+      text-align: left;
+      margin-bottom: 35px;
+    }
+    
+    .tc_inner_modal .tc_front p {
+      text-align: left;
+      min-height: 70px;
+      font-size: 24px;
+      line-height: 180%;
+    }
+    .tc_next, .tc_prev {
+      line-height: 90%;
+    }
+    .tc_inner_modal {
+      margin: 40px;
+    }
+    .tc_inner_modal h1{
+      padding-bottom: 5em;
+    }
+    
+	</style>
+	<script>
+	  $(document).ready( function() {
+	    $(document).ready( function() {
+  	    $(".tips").tip_cards();
+  	  });
+	  });
+		
+	</script>
+</head>
+<body>
+  <div class="wrapper">
+	  <div class="main">
+	    <div class="header">
+        <h1>十五问</h1>
+        <h2><a href="http://www.zhihu.com/question/20904244/answer/16630519" style="text-decoration:underline;" target="_blank">据说</a>是纽约时报的十五问。请<strong>点开卡片</strong>挨个仔细、<strong>理智地</strong>讨论。</h2>
+        
+
+  	  </div>
+  	  
+      <div class="page-container">
+        <ul class="tips">
+          <li>
+            	<a href="#tip1">1. 我们要不要孩子？如果要，主要由谁来负责？</a>
+            <div id="tip1" class="tip">
+                <h1>1. 我们要不要孩子？如果要，主要由谁来负责？</h1>
+            </div>
+          </li>
+          <li>
+            	<a href="#tip2">2. 我们的家庭赚钱能力及目标是什么？ </a>
+            <div id="tip2" class="tip">
+                <h1>2. 我们的家庭赚钱能力及目标是什么？消费观及储蓄观会不会发生冲突？ </h1>
+            </div>
+          </li>
+          <li>
+            	<a href="#tip3">3. 我们的家庭如何维持？由谁来掌握可能出现的风险? </a>
+
+            <div id="tip3" class="tip">
+                <h1>3. 我们的家庭如何维持？由谁来掌握可能出现的风险? </h1>
+            </div>
+          </li>
+          <li>
+            	<a href="#tip4">4. 我们有没有详尽地交换过双方的疾病史？ </a>
+
+            <div id="tip4" class="tip">
+                <h1>4. 我们有没有详尽地交换过双方的疾病史？包括精神上的. </h1>
+            </div>
+          </li>
+          <li>
+            	<a href="#tip5">5. 我们父母的态度有没有达到我们的预期？会不会给足够的祝福？</a>
+
+            <div id="tip5" class="tip">
+                <h1>5. 我们父母的态度有没有达到我们的预期？会不会给足够的祝福？</h1>
+            </div>
+          </li>
+          <li>
+            	<a href="#tip6">6. 我们有没有自然、坦诚地说出自己的性需求、性的偏好及恐惧？</a>
+
+
+            <div id="tip6" class="tip">
+
+                <h1>6. 我们有没有自然、坦诚地说出自己的性需求、性的偏好及恐惧？</h1>
+
+            </div>
+          </li>
+          <li>
+
+            	<a href="#tip7">7. 卧室能放电视机吗？ </a>
+
+            <div id="tip7" class="tip">
+
+                <h1>7. 卧室能放电视机吗？ </h1>
+                <p> 其实我觉得这个问题的意义在于讨论工作、娱乐、生活是否分得开？</p>
+
+            </div>
+          </li>
+          <li>
+
+            	<a href="#tip8">8. 我们真的能倾听对方诉说，并公平对待对方的想法和抱怨吗？ </a>
+
+            <div id="tip8" class="tip">
+
+                <h1>8. 我们真的能倾听对方诉说，并公平对待对方的想法和抱怨吗？ </h1>
+            </div>
+          </li>
+          <li>
+
+            	<a href="#tip9">9. 我们清晰地了解对方的精神需求及信仰吗？</a>
+
+
+
+            <div id="tip9" class="tip">
+
+                <h1>9. 我们清晰地了解对方的精神需求及信仰吗？我们讨论过孩子将来的信仰问题吗？</h1>
+                <p>可能对很多人来说，这个问题里面并没有信仰问题，更多的是精神需求的讨论。</p>
+
+            </div>
+          </li>
+          <li>
+
+            	<a href="#tip10">10. 我们喜欢并尊重对方的朋友吗？ </a>
+            
+            <div id="tip10" class="tip">
+
+                <h1>10. 我们喜欢并尊重对方的朋友吗？ </h1>
+            </div>
+          </li>
+          <li>
+
+              <a href="#tip11">11. 我们能不能看重并尊敬对方的父母？</a>
+            
+            <div id="tip11" class="tip">
+
+                <h1>11. 我们能不能看重并尊敬对方的父母？我们有没考虑到父母可能会干涉我们的关系？</h1>
+            </div>
+          </li>
+          <li>
+
+              <a href="#tip12">12. 我的家庭最让你心烦的事情是什么？</a>
+            
+            <div id="tip12" class="tip">
+
+                <h1>12. 我的家庭最让你心烦的事情是什么？</h1>
+            </div>
+          </li>
+          <li>
+
+              <a href="#tip13">13. 我们永远不会因为婚姻放弃的东西是什么？</a>
+            
+            <div id="tip13" class="tip">
+
+                <h1>13. 我们永远不会因为婚姻放弃的东西是什么？ </h1>
+            </div>
+          </li>
+          <li>
+
+              <a href="#tip14">14. 如果我们中的一人需要离开其家族所在地陪同另一个人到外地工作，做得到吗？</a>
+            
+            <div id="tip14" class="tip">
+
+                <h1>14. 如果我们中的一人需要离开其家族所在地陪同另一个人到外地工作，做得到吗？</h1>
+            </div>
+          </li>
+          <li>
+
+              <a href="#tip15">15. 我们是不是充满信心面对任何挑战使婚姻一直往前走？ </a>
+            
+            <div id="tip15" class="tip">
+
+                <h1>15. 我们是不是充满信心面对任何挑战使婚姻一直往前走？</h1>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a class="back" href="http://openmetric.org/me/cn/">返回章鱼喵的介绍</a>
+
+  </div>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49034078-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
